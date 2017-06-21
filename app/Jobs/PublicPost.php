@@ -33,5 +33,6 @@ class PublicPost implements ShouldQueue
     {
         //
         $this->post->isPublic = true;
+        $this->post->save();
     }
 }
