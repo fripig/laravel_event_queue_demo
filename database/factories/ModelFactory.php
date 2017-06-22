@@ -14,7 +14,6 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
-
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
@@ -26,8 +25,8 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->define(App\Post::class, function (Faker\Generator $faker) {
 
     return [
-        'title' => $faker->text(200),
-        'body' => $faker->paragraph(rand(1,3)),
+        'title' => $faker->realText(rand(10,50)),
+        'body' => $faker->realText(rand(10,300)),
         'user_id' => rand(1,10)
     ];
 });
