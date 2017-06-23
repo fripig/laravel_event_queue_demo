@@ -13,13 +13,17 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\PostUpdate' => [
+        'App\Events\PostCreated' => [
             'App\Listeners\PostCDNUpdate',
-            'App\Listeners\PostCacheUpdate',
         ],
-        'App\Events\PostDelete' => [
-            'App\Listeners\PostCDNUpdate',
+        'App\Events\PostUpdate' => [
             'App\Listeners\PostCacheUpdate',
+            'App\Listeners\PostCDNUpdate',
+        ],
+        'App\Events\PostDeleting' => [
+            'App\Listeners\PostUnpublic',
+            'App\Listeners\PostCacheUpdate',
+            'App\Listeners\PostCDNUpdate',
             'App\Listeners\PostDelete',
         ],
     ];

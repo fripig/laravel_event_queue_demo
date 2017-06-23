@@ -6,7 +6,7 @@ use App\Events\PostDeleting;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class PostCacheUpdate
+class PostUnpublic
 {
     /**
      * Create the event listener.
