@@ -21,7 +21,7 @@ class PostDelete
     /**
      * Handle the event.
      *
-     * @param  PostDeleting  $event
+     * @param  PostEvent $event
      * @return void
      */
     public function handle(PostEvent $event)
