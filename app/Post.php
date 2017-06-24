@@ -14,6 +14,12 @@ class Post extends Model
         'updated' => PostUpdate::class,
         'deleting' =>PostDeleting::class,
     ];
+    protected $fillable = [
+        'title',
+        'body',
+        'isPublic'
+    ];
+
     public function statu()
     {
         return $this->hasOne('PostStatu','post_id','id');

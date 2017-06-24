@@ -6,7 +6,7 @@ use App\Events\PostEvent;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class PostUnpublic
+class PostPublic
 {
     /**
      * Create the event listener.
@@ -21,12 +21,12 @@ class PostUnpublic
     /**
      * Handle the event.
      *
-     * @param  PostEvent $event
+     * @param  PostPublic  $event
      * @return void
      */
     public function handle(PostEvent $event)
     {
-        $event->post->isPublic = false;
+        $event->post->isPublic = true;
         $event->post->save();
     }
 }
