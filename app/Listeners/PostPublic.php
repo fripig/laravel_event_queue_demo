@@ -26,6 +26,7 @@ class PostPublic
      */
     public function handle(PostEvent $event)
     {
+        echo "PostPublic\n";
         $event->post->isPublic = true;
         $event->post->save();
     }

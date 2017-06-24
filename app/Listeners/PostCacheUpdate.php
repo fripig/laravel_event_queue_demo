@@ -27,5 +27,6 @@ class PostCacheUpdate
     public function handle($event)
     {
         //
+        echo "PostCacheUpdate\n";
     }
 }

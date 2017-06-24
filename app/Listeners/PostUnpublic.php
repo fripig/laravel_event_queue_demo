@@ -26,6 +26,7 @@ class PostUnpublic
      */
     public function handle(PostEvent $event)
     {
+        echo "PostUnpublic\n";
         $event->post->isPublic = false;
         $event->post->save();
     }

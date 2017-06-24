@@ -6,7 +6,7 @@ use App\Events\PostEvent;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class PostCDNUpdate
+class PostCDNUpdate implements ShouldQueue
 {
     /**
      * Create the event listener.
@@ -27,5 +27,6 @@ class PostCDNUpdate
     public function handle(PostEvent $event)
     {
         //
+        echo "PostCDNUpdate\n";
     }
 }
