@@ -2,7 +2,7 @@
 
 namespace App\Listeners;
 
-use App\Events\PostDeleting;
+use App\Events\PostEvent;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
@@ -24,7 +24,7 @@ class PostCDNUpdate
      * @param  PostDeleting  $event
      * @return void
      */
-    public function handle(PostDeleting $event)
+    public function handle(PostEvent $event)
     {
         //
     }
