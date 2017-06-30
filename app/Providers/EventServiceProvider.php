@@ -27,7 +27,6 @@ class EventServiceProvider extends ServiceProvider
         ],
         'App\Events\PostPublic' => [
             'App\Listeners\PostPublic',
-
             'App\Listeners\PostCDNUpdate',
             'App\Listeners\PostCacheUpdate',
         ],
