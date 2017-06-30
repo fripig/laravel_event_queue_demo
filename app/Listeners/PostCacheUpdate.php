@@ -6,8 +6,9 @@ use App\Events\PostEvent;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class PostCacheUpdate
+class PostCacheUpdate implements ShouldQueue
 {
+    public $queue = 'high';
     /**
      * Create the event listener.
      *
