@@ -14,8 +14,6 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $listen = [
         'App\Events\PostCreated' => [
-            'App\Listeners\PostCacheUpdate',
-            'App\Listeners\PostCDNUpdate',
         ],
         'App\Events\PostUpdate' => [
             'App\Listeners\PostCacheUpdate',
